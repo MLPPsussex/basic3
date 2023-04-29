@@ -18,7 +18,7 @@ elem.value='Hello'
 alert('starting')
 leoApiKey="693a5c60-f266-4bf7-934f-3db55cd5c5f6"
      
- /*
+
 leonardo()
      
 
@@ -28,7 +28,7 @@ function leonardo(){
   method: 'POST',
   headers: {accept: 'application/json', 'content-type': 'application/json',
     authorization: `Bearer ${leoApiKey}` },
-  body: JSON.stringify({prompt: promp, 
+  body: JSON.stringify({prompt: 'cat', 
   modelId: '6bef9f1b-29cb-40c7-b9df-32b51c1f67d3',
   width: dims, height: dims})
       }
