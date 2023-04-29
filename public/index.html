@@ -27,6 +27,7 @@ function leonardo(){
   headers: {accept: 'application/json', 'content-type': 'application/json',
     authorization: `Bearer ${leoApiKey}` },
   body: JSON.stringify({prompt: promp, width: dims, height: dims})
+      }
 
 leo=""
 fetch('https://cloud.leonardo.ai/api/rest/v1/generations', option1)
