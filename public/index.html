@@ -34,7 +34,7 @@ leo=""
 fetch('https://cloud.leonardo.ai/api/rest/v1/generations', option1)
   .then(response => response.json())
   .then(data => {leo=data.sdGenerationJob.generationId
-                urlElem.value="SeriesID "+leo
+                elem.value="SeriesID "+leo
                 leoTimer()})
   .catch(err => {alert('APIerror check key')
                  leoTime=0
@@ -44,9 +44,11 @@ fetch('https://cloud.leonardo.ai/api/rest/v1/generations', option1)
                  );
 }
 function leoTimer(){
-  if(leoTime<10){leoTime++;setTimeout(leoTimer,100);return}
+  if(leoTime<10){leoTime++;
+                 elem.value=leoTime
+                 setTimeout(leoTimer,100);return}
   
-  secondAPI()
+  //secondAPI()
 }
 function secondAPI(){
   elem.value='Fetching Image URLs'
