@@ -24,11 +24,8 @@ leonardo()
 function leonardo(){
   const option1 = {
   method: 'POST',
-  headers: {
-    accept: 'application/json',
-    'content-type': 'application/json',
-    authorization: `Bearer ${leoApiKey}`
-  },
+  headers: {accept: 'application/json', 'content-type': 'application/json',
+    authorization: `Bearer ${leoApiKey}` },
   body: JSON.stringify({prompt: promp, width: dims, height: dims})
 };
 leo=""
@@ -38,11 +35,7 @@ fetch('https://cloud.leonardo.ai/api/rest/v1/generations', option1)
                 elem.value="SeriesID "+leo
                 leoTimer()})
   .catch(err => {alert('APIerror check key')
-                 leoTime=0
- 
-                 elem.value="cccc"
-                 }
-                 );
+
 }
 function leoTimer(){
   if(leoTime<10){leoTime++;
@@ -64,12 +57,8 @@ function secondAPI(){
    fetch('https://cloud.leonardo.ai/api/rest/v1/generations/'+leo, option2)
   .then(response => response.json())
   .then(data => {
-     
     alert(data.generations_by_pk.generated_images[0].url)
-    
     }
-    
-        
    </script>
 </body>
 </html>
